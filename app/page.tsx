@@ -15,9 +15,6 @@ import {
   UserIcon,
   PhoneArrowUpRightIcon,
   CircleStackIcon,
-  ArrowTrendingUpIcon,
-  ClockIcon,
- 
 } from "@heroicons/react/24/outline";
 import TestimonialsSection from "@/components/TestimonialsSection";
 
