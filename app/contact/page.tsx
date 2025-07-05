@@ -42,7 +42,7 @@ const ContactPage = () => {
         setSubmitStatus('error');
       }
     } catch (error) {
-      setSubmitStatus('error');
+      setSubmitStatus(error instanceof Error ? 'error' : null);
     } finally {
       setIsSubmitting(false);
     }
@@ -56,7 +56,7 @@ const ContactPage = () => {
             Get in Touch
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Have questions or want to discuss your project? Send us a message and we'll get back to you soon.
+            Have questions or want to discuss your project? Send us a message and we&apos;ll get back to you soon.
           </p>
         </div>
 
@@ -147,7 +147,7 @@ const ContactPage = () => {
                     </div>
                     <div className="ml-3">
                       <p className="text-sm font-medium text-green-800">
-                        Message sent successfully! We'll get back to you soon.
+                        Message sent successfully! We&apos;ll get back to you soon.
                       </p>
                     </div>
                   </div>
