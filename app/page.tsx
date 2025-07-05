@@ -107,22 +107,22 @@ export default function Home() {
      <section
       className="relative flex items-center justify-center text-center bg-[#1c1c1e] h-screen lg:h-[600px] w-full"
       style={{
-        backgroundImage: "url('/images/herobg.png')",
+        backgroundImage: "url('/images/herobg3.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
     >
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/50"></div>
+      <div className="absolute inset-0 bg-black/80"></div>
       
       {/* Content container */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col items-center justify-center h-full">
           {/* Main heading with gradient text */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="block">GROW FASTER</span>
-            <span className="block text-[#5e3ac7]">AND WORK LESS</span>
+            <span className="block bg-gradient-to-tl from-gray-400 to-white bg-clip-text text-transparent">GROW FASTER</span>
+            <span className="block  bg-gradient-to-tl from-[#5e3ac7]/50 to-[#5e3ac7] bg-clip-text text-transparent">AND WORK LESS</span>
           </h1>
           
           {/* Subheading */}
@@ -132,7 +132,7 @@ export default function Home() {
           </p>
           
           {/* Button group */}
-          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center backdrop-blur-md bg-white/10 border border-white/10 rounded-2xl p-8 shadow-xl">
+          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center backdrop-blur-md bg-white/10  border-[#5e3ac7] border-2 rounded-2xl p-8 shadow-xl">
       
             <Link
               href="/contact"
@@ -161,24 +161,15 @@ export default function Home() {
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 text-center">
              <span className="text-[#5e3ac7]">About </span>FoundLabs
             </h2>
-            <div className="space-y-6 text-white text-center">
+            <div className="space-y-6 text-white text-center text-2xl font-bold">
               <p>
                 At FoundLabs, we&apos;re on a mission to democratize AI automation for businesses of all sizes. 
                 We believe that every company—not just tech giants—should have access to intelligent tools 
                 that eliminate busywork and unlock growth.
               </p>
-              <p>
-                Our vision is a world where entrepreneurs spend their time on strategy and creativity, 
-                not repetitive tasks. We started FoundLabs after seeing too many brilliant founders 
-                overwhelmed by operational complexity instead of focused on their big ideas.
-              </p>
-              <p>
-                Today, we combine cutting-edge AI with deep business understanding to create solutions 
-                that feel like you&apos;ve hired an expert team—at a fraction of the cost.
-              </p>
             </div>
 
-            <div className="mt-8 flex items-center space-x-4">
+            <div className="mt-8 flex items-center space-x-4 justify-center">
               <div className="flex-shrink-0">
                 <Image
                   src="/images/profileimg.webp" // Replace with your photo path
@@ -219,13 +210,13 @@ export default function Home() {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="bg-gray-900 p-6 rounded-lg border-2 border-[#724bf0]"
+              className="bg-gradient-to-b from-transparent to-gray-800  p-6 rounded-lg border-t-2 border-[#724bf0]"
             >
               <div className="flex items-center mb-6">
-                <div className="p-3 rounded-lg bg-[#724bf0] mr-4">
+                {/* <div className="p-3 rounded-lg bg-[#724bf0] mr-4">
                   {service.icon}
-                </div>
-                <h3 className="text-xl font-bold text-white">{service.title}</h3>
+                </div> */}
+                <h3 className="text-2xl font-bold text-white">{service.title}</h3>
               </div>
               <p className="text-gray-200 mb-4">{service.description}</p>
               <ul className="space-y-2">
