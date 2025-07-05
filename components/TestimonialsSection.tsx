@@ -44,7 +44,7 @@ const TestimonialsSection = () => {
               className="bg-transparent rounded-xl p-8 shadow-sm border border-[#724bf0]"
             >
               <ChatBubbleBottomCenterTextIcon className="h-8 w-8 text-[#724bf0] mb-4" />
-              <p className="text-gray-400 mb-6">{testimonial.content}</p>
+              <p className="text-gray-400 mb-6">&quot;{testimonial.content}&quot;</p>
               <div className="flex items-center">
                 <div className="h-12 w-12 rounded-full bg-gray-200 mr-4 flex items-center justify-center text-[#724bf0] font-bold">
                   {testimonial.name.charAt(0)}

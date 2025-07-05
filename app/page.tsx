@@ -192,7 +192,7 @@ export default function Home() {
             </h2>
             <div className="space-y-6 text-white">
               <p>
-                At FoundLabs, we're on a mission to democratize AI automation for businesses of all sizes. 
+                At FoundLabs, we&apos;re on a mission to democratize AI automation for businesses of all sizes. 
                 We believe that every company—not just tech giants—should have access to intelligent tools 
                 that eliminate busywork and unlock growth.
               </p>
@@ -203,7 +203,7 @@ export default function Home() {
               </p>
               <p>
                 Today, we combine cutting-edge AI with deep business understanding to create solutions 
-                that feel like you've hired an expert team—at a fraction of the cost.
+                that feel like you&apos;ve hired an expert team—at a fraction of the cost.
               </p>
             </div>
 
@@ -221,7 +221,7 @@ export default function Home() {
                 <h4 className="font-bold text-white">Ghulam Muhammad</h4>
                 <p className="text-[#5e3ac7]">Founder & CEO</p>
                 <p className="text-sm text-gray-500 mt-1">
-                  "We build the tools I wish I had when starting my first company"
+                  &quot;We build the tools I wish I had when starting my first company &quot;
                 </p>
               </div>
             </div>
