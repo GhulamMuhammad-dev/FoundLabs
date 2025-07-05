@@ -1,5 +1,6 @@
 'use client'
 import Image from "next/image";
+import Link from "next/link";
 
 import {
   ArrowRightIcon,
@@ -103,33 +104,6 @@ export default function Home() {
 
 
 
-  const caseStudies = [
-    {
-      title: "E-commerce Support Automation",
-      before: "8-hour response times, 3 support staff overwhelmed",
-      after: "Instant 24/7 responses with AI handling 80% of inquiries",
-      metrics: [
-        { icon: <ArrowTrendingUpIcon className="h-5 w-5" />, value: "70%", label: "Reduced workload" },
-        { icon: <ClockIcon className="h-5 w-5" />, value: "24/7", label: "Response time" },
-        { icon: <UserGroupIcon className="h-5 w-5" />, value: "2 → 1", label: "Team members needed" }
-      ],
-      logo: "/logos/ecom-company.svg"
-    },
-    {
-      title: "SaaS Onboarding Automation",
-      before: "Manual onboarding taking 5+ hours per client",
-      after: "Fully automated onboarding with 98% completion rate",
-      metrics: [
-        { icon: <ArrowTrendingUpIcon className="h-5 w-5" />, value: "90%", label: "Time saved" },
-        { icon: <ClockIcon className="h-5 w-5" />, value: "15min", label: "Average setup" },
-        { icon: <UserGroupIcon className="h-5 w-5" />, value: "1 AI", label: "Replaced team" }
-      ],
-      logo: "/logos/saas-company.svg"
-    }
-  ];
-
-
-
   return (
     <>
     {/* hero section */}
@@ -163,19 +137,19 @@ export default function Home() {
           {/* Button group */}
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center backdrop-blur-md bg-white/10 border border-white/10 rounded-2xl p-8 shadow-xl">
       
-            <a
-              href="#contact"
+            <Link
+              href="/contact"
               className="bg-transparent hover:bg-white/10 text-white border-2 border-white px-8 py-3 rounded-lg font-medium transition-all duration-300 text-lg flex items-center justify-center"
             >
               CONTACT
-            </a>
-            <a
-              href="#services"
+            </Link>
+            <Link
+              href="/services"
               className="bg-[#724bf0] hover:bg-[#5e3ac7] text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 text-lg flex items-center justify-center gap-2"
             >
               SERVICES
               <ArrowRightIcon className="h-5 w-5" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -187,10 +161,10 @@ export default function Home() {
       <div className="max-w-2xl mx-auto">
         <div className="grid grid-cols-1  items-center justify-center">
           <div className="order-2 lg:order-1">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 text-center">
              <span className="text-[#5e3ac7]">About </span>FoundLabs
             </h2>
-            <div className="space-y-6 text-white">
+            <div className="space-y-6 text-white text-center">
               <p>
                 At FoundLabs, we&apos;re on a mission to democratize AI automation for businesses of all sizes. 
                 We believe that every company—not just tech giants—should have access to intelligent tools 
@@ -348,70 +322,6 @@ export default function Home() {
       </div>
     </section>
 
-    {/* case studies section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#1c1c1e]">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#724bf0] mb-4">
-            Proven Results
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Before/After AI Implementation
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {caseStudies.map((study, index) => (
-            <div key={index} className="bg-[#1c1c1e] rounded-xl overflow-hidden border border-gray-200 hover:border-[#724bf0]/50 transition-all duration-300">
-              <div className="p-8">
-                <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-white rounded-lg shadow-sm flex items-center justify-center mr-4">
-                    <img src={study.logo} alt="Company logo" className="h-10 w-10 object-contain" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white">{study.title}</h3>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                  <div className="space-y-4">
-                    <h4 className="font-semibold text-gray-500">Before AI</h4>
-                    <div className="bg-gray-800 p-4 rounded-lg border-l-4 border-red-400">
-                      <p className="text-gray-200">{study.before}</p>
-                    </div>
-                  </div>
-                  <div className="space-y-4">
-                    <h4 className="font-semibold text-gray-500">After AI</h4>
-                    <div className="bg-gray-800 p-4 rounded-lg border-l-4 border-[#724bf0]">
-                      <p className="text-gray-200">{study.after}</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-3 gap-4">
-                  {study.metrics.map((metric, i) => (
-                    <div key={i} className="bg-gray-900 rounded-lg p-4 text-center shadow-sm">
-                      <div className="flex justify-center text-[#724bf0] mb-2">
-                        {metric.icon}
-                      </div>
-                      <p className="text-2xl font-bold text-white">{metric.value}</p>
-                      <p className="text-sm text-gray-600">{metric.label}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              
-              <div className="bg-[#724bf0]/10 px-8 py-4 border-t border-gray-200">
-                <a href="#" className="text-[#724bf0] font-medium flex items-center justify-end">
-                  View full case study
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
 
     {/* testimonials section */}
      <TestimonialsSection />
