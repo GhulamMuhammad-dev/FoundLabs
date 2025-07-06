@@ -117,7 +117,7 @@ const ServicesPage = () => {
           {/* Background Image with Gradient Overlay */}
           <div className="absolute inset-0">
             <Image
-              src="/images/herobg3.png" // Replace with your image path
+              src="/images/herobg3.webp" // Replace with your image path
               alt=""
               fill
               className="object-cover"

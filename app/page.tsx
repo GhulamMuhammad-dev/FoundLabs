@@ -105,16 +105,16 @@ export default function Home() {
     <>
     {/* hero section */}
      <section
-      className="relative flex items-center justify-center text-center bg-[#1c1c1e] h-screen lg:h-[600px] w-full"
+      className="relative flex items-center justify-center text-center bg-[#1c1c1e] h-screen lg:h-[600px] w-full "
       style={{
-        backgroundImage: "url('/images/herobg3.png')",
+        backgroundImage: "url('/images/herobg3.webp')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
     >
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/80"></div>
+      <div className="absolute inset-0 bg-black/80 hover:bg-[#724bf0]/10 transition duration-300"></div>
       
       {/* Content container */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

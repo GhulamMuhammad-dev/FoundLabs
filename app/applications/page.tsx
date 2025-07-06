@@ -1,4 +1,7 @@
-import { ArrowTopRightOnSquareIcon, CloudArrowUpIcon, CommandLineIcon, ChartBarIcon,ChatBubbleBottomCenterTextIcon,ArrowTrendingUpIcon } from '@heroicons/react/24/outline';
+'use client';
+import {
+  ArrowTopRightOnSquareIcon
+} from '@heroicons/react/24/outline';
 import Image from 'next/image';
 
 const ApplicationsPage = () => {
@@ -57,50 +60,26 @@ const ApplicationsPage = () => {
     }
   ];
 
-  const categories = [
-    { name: "All", icon: <CommandLineIcon className="h-5 w-5" />, count: saasProducts.length },
-    { name: "Productivity", icon: <CloudArrowUpIcon className="h-5 w-5" />, count: saasProducts.filter(p => p.category === "Productivity").length },
-    { name: "Customer Support", icon: <ChatBubbleBottomCenterTextIcon className="h-5 w-5" />, count: saasProducts.filter(p => p.category === "Customer Support").length },
-    { name: "Analytics", icon: <ChartBarIcon className="h-5 w-5" />, count: saasProducts.filter(p => p.category === "Analytics").length },
-    { name: "Sales", icon: <ArrowTrendingUpIcon className="h-5 w-5" />, count: saasProducts.filter(p => p.category === "Sales").length }
-  ];
-
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#1c1c1e] text-white">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl sm:text-5xl font-bold text-[#1c1c1e] mb-4">
-            Our SaaS Products
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            AI-powered applications designed to solve specific business challenges
+          <h1 className="text-4xl sm:text-5xl font-bold mb-4">Our SaaS Applications</h1>
+          <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+            Powerful, AI-powered tools built to solve real business challenges.
           </p>
         </div>
 
-        {/* Category Filters */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category.name}
-              className="flex items-center gap-2 px-4 py-2 rounded-full border border-gray-200 hover:border-[#724bf0] hover:bg-[#724bf0]/10 transition-colors"
-            >
-              {category.icon}
-              <span>{category.name}</span>
-              <span className="text-gray-500 text-sm">({category.count})</span>
-            </button>
-          ))}
-        </div>
-
         {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {saasProducts.map((product) => (
-            <div 
+            <div
               key={product.id}
-              className="bg-[#fafafc] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-100"
+              className="bg-[#2a2a2d] rounded-2xl border border-[#333] hover:border-[#724bf0] transition-all duration-300"
             >
               <div className="p-6">
-                <div className="flex items-center mb-4">
+                <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-white rounded-lg shadow-sm flex items-center justify-center p-2 mr-4">
                     <Image
                       src={product.logo}
@@ -111,18 +90,19 @@ const ApplicationsPage = () => {
                     />
                   </div>
                   <div>
-                    <h2 className="text-xl font-bold text-[#1c1c1e]">{product.name}</h2>
+                    <h2 className="text-xl font-semibold text-white">{product.name}</h2>
                     <span className="text-sm text-[#724bf0] bg-[#724bf0]/10 px-2 py-1 rounded-full">
                       {product.category}
                     </span>
                   </div>
                 </div>
-                <p className="text-gray-600 mb-6">{product.description}</p>
-                
-                <h3 className="font-medium text-[#1c1c1e] mb-3">Key Features:</h3>
+
+                <p className="text-gray-300 mb-6">{product.description}</p>
+
+                <h3 className="font-medium text-white mb-3">Key Features:</h3>
                 <ul className="space-y-2 mb-6">
                   {product.features.map((feature, i) => (
-                    <li key={i} className="flex items-start text-gray-700">
+                    <li key={i} className="flex items-start text-gray-300">
                       <span className="text-[#724bf0] mr-2">•</span>
                       {feature}
                     </li>
@@ -133,7 +113,7 @@ const ApplicationsPage = () => {
                   href={product.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center text-[#724bf0] hover:text-[#5e3ac7] font-medium"
+                  className="inline-flex items-center text-[#724bf0] hover:text-[#9c82f9] font-medium transition-colors"
                 >
                   Visit {product.name}
                   <ArrowTopRightOnSquareIcon className="h-5 w-5 ml-2" />
@@ -144,14 +124,14 @@ const ApplicationsPage = () => {
         </div>
 
         {/* CTA */}
-        <div className="mt-20 text-center bg-[#724bf0]/5 rounded-2xl p-12">
-          <h2 className="text-3xl font-bold text-[#1c1c1e] mb-4">
+        <div className="mt-24 text-center bg-[#724bf0]/5 rounded-2xl p-12">
+          <h2 className="text-3xl font-bold mb-4 text-white">
             Need a Custom AI Solution?
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
-            We build tailored SaaS applications to solve your unique business challenges.
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-8">
+            We build bespoke SaaS platforms tailored to your business needs.
           </p>
-          <button className="bg-[#724bf0] hover:bg-[#5e3ac7] text-white px-8 py-4 rounded-lg font-medium transition-colors duration-300">
+          <button className="bg-[#724bf0] hover:bg-[#5e3ac7] text-white px-8 py-3 rounded-lg font-medium transition-colors duration-300">
             Request a Demo
           </button>
         </div>
