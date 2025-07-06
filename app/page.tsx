@@ -114,7 +114,7 @@ export default function Home() {
       }}
     >
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/80 hover:bg-[#724bf0]/10 transition duration-300"></div>
+      <div className="absolute inset-0 bg-black/80 hover:bg-[#724bf0]/30 transition duration-300"></div>
       
       {/* Content container */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
