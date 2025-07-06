@@ -142,7 +142,7 @@ const Navbar = () => {
                   Applications
                 </span>
               </Link>
-              <Link href="/Contact">
+              <Link href="/contact">
                 <span className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-[#724bf0] hover:bg-[#5e3ac7] cursor-pointer">
                  Contact
                 </span>
