@@ -1,49 +1,52 @@
-'use client';
-import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
-import Image from 'next/image';
-import Link from 'next/link';
+"use client";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
+import Link from "next/link";
 
 const WorkPage = () => {
   const projects = [
     {
       id: 1,
-      title: "E-commerce AI Assistant",
-      description: "Automated customer support for online stores with 85% query resolution rate.",
-      tags: ["AI Chatbot", "E-commerce", "Customer Support"],
-      image: "/projects/ecommerce-ai.jpg",
-      link: "#",
+      title: "Upwork Proposal Analyzer AI",
+      description:
+        "AI-powered tool that analyzes and improves Upwork proposals to boost response rates and client conversion.",
+      tags: ["AI Tool", "Freelancing", "Proposal Optimization"],
+      image: "/images/upworkProposalThum.webp",
+      link: "https://proposalanalysis.netlify.app",
       results: [
-        { metric: "70%", label: "Support tickets reduced" },
-        { metric: "24/7", label: "Availability" },
-        { metric: "4.9/5", label: "Customer satisfaction" }
-      ]
+        { metric: "3x", label: "Higher response rate" },
+        { metric: "90%", label: "Improvement suggestions accuracy" },
+        { metric: "4.8/5", label: "User satisfaction" },
+      ],
     },
     {
       id: 2,
       title: "SaaS Onboarding Automation",
-      description: "Streamlined user onboarding process reducing setup time from 3 days to 2 hours.",
+      description:
+        "Streamlined user onboarding process reducing setup time from 3 days to 2 hours.",
       tags: ["Workflow Automation", "SaaS", "User Experience"],
       image: "/projects/saas-onboarding.jpg",
       link: "#",
       results: [
         { metric: "90%", label: "Onboarding completion" },
         { metric: "2 hours", label: "Average setup time" },
-        { metric: "40%", label: "Churn reduction" }
-      ]
+        { metric: "40%", label: "Churn reduction" },
+      ],
     },
     {
       id: 3,
       title: "Lead Qualification System",
-      description: "AI-powered lead scoring that increased sales team efficiency by 60%.",
+      description:
+        "AI-powered lead scoring that increased sales team efficiency by 60%.",
       tags: ["Lead Generation", "Sales Automation", "Machine Learning"],
       image: "/projects/lead-qualification.jpg",
       link: "#",
       results: [
         { metric: "60%", label: "Team efficiency gain" },
         { metric: "3x", label: "More qualified leads" },
-        { metric: "28%", label: "Conversion increase" }
-      ]
-    }
+        { metric: "28%", label: "Conversion increase" },
+      ],
+    },
   ];
 
   return (
@@ -59,7 +62,7 @@ const WorkPage = () => {
 
         {/* Projects Grid */}
         <div className="grid gap-12 sm:grid-cols-1 md:grid-cols-2">
-          {projects.map(project => (
+          {projects.map((project) => (
             <div
               key={project.id}
               className="bg-[#2a2a2d] rounded-2xl overflow-hidden border border-[#2f2f32] hover:border-[#724bf0] transition duration-300"
@@ -73,7 +76,9 @@ const WorkPage = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                 <div className="absolute bottom-0 left-0 p-4">
-                  <h2 className="text-2xl font-semibold text-white">{project.title}</h2>
+                  <h2 className="text-2xl font-semibold text-white">
+                    {project.title}
+                  </h2>
                   <div className="flex flex-wrap gap-2 mt-2">
                     {project.tags.map((tag, i) => (
                       <span
@@ -93,7 +98,9 @@ const WorkPage = () => {
                 <div className="grid grid-cols-3 gap-4 text-center mb-6">
                   {project.results.map((result, i) => (
                     <div key={i}>
-                      <p className="text-xl font-bold text-white">{result.metric}</p>
+                      <p className="text-xl font-bold text-white">
+                        {result.metric}
+                      </p>
                       <p className="text-sm text-gray-400">{result.label}</p>
                     </div>
                   ))}
@@ -117,9 +124,7 @@ const WorkPage = () => {
             Ready to transform your business with AI?
           </h2>
           <button className="bg-[#724bf0] hover:bg-[#5e3ac7] text-white px-8 py-3 rounded-lg font-medium transition">
-            <Link href="/contact">
-            Contact
-            </Link>
+            <Link href="/contact">Contact</Link>
           </button>
         </div>
       </div>

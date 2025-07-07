@@ -163,9 +163,9 @@ export default function Home() {
             </h2>
             <div className="space-y-6 text-white text-center text-2xl font-bold">
               <p>
-                At FoundLabs, we&apos;re on a mission to democratize AI automation for businesses of all sizes. 
+                &quot;At FoundLabs, we&apos;re on a mission to democratize AI automation for businesses of all sizes. 
                 We believe that every company—not just tech giants—should have access to intelligent tools 
-                that eliminate busywork and unlock growth.
+                that eliminate busywork and unlock growth.&quot;
               </p>
             </div>
 
@@ -182,7 +182,7 @@ export default function Home() {
               <div>
                 <h4 className="font-bold text-white">Ghulam Muhammad</h4>
                 <p className="text-[#5e3ac7]">Founder & CEO</p>
-                <p className="text-sm text-gray-500 mt-1">
+                <p className="text-sm text-gray-500 mt-1 secondary-font">
                   &quot;We build the tools I wish I had when starting my first company &quot;
                 </p>
               </div>
@@ -218,7 +218,7 @@ export default function Home() {
                 </div> */}
                 <h3 className="text-2xl font-bold text-white">{service.title}</h3>
               </div>
-              <p className="text-gray-200 mb-4">{service.description}</p>
+              <p className="text-gray-200 mb-4 ">{service.description}</p>
               <ul className="space-y-2">
                 {service.examples.map((example, i) => (
                   <li key={i} className="flex items-center text-gray-400">
@@ -257,7 +257,7 @@ export default function Home() {
                   {group.icon}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{group.title}</h3>
-                <p className="text-gray-300">{group.description}</p>
+                <p className="text-gray-300 ">{group.description}</p>
               </div>
             </div>
           ))}
