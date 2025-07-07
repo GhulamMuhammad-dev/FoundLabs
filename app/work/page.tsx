@@ -1,6 +1,7 @@
 'use client';
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const WorkPage = () => {
   const projects = [
@@ -116,7 +117,9 @@ const WorkPage = () => {
             Ready to transform your business with AI?
           </h2>
           <button className="bg-[#724bf0] hover:bg-[#5e3ac7] text-white px-8 py-3 rounded-lg font-medium transition">
-            Get Started
+            <Link href="/contact">
+            Contact
+            </Link>
           </button>
         </div>
       </div>

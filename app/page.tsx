@@ -13,8 +13,8 @@ import {
   BuildingStorefrontIcon,
   UserGroupIcon,
   UserIcon,
-  PhoneArrowUpRightIcon,
-  CircleStackIcon,
+  // PhoneArrowUpRightIcon,
+  // CircleStackIcon,
 } from "@heroicons/react/24/outline";
 import TestimonialsSection from "@/components/TestimonialsSection";
 
@@ -82,17 +82,17 @@ export default function Home() {
    
   const steps = [
     {
-      icon: <PhoneArrowUpRightIcon className="h-8 w-8 text-[#724bf0]" />,
+      // icon: <PhoneArrowUpRightIcon className="h-8 w-8 text-[#724bf0]" />,
       title: "Strategy Call & Workflow Mapping",
       description: "We analyze your business processes to identify automation opportunities and design optimal AI solutions"
     },
     {
-      icon: <CircleStackIcon className="h-8 w-8 text-[#724bf0]" />,
+      // icon: <CircleStackIcon className="h-8 w-8 text-[#724bf0]" />,
       title: "AI Solution Design & Development",
       description: "Our team builds custom AI agents and workflows tailored to your specific business needs"
     },
     {
-      icon: <RocketLaunchIcon className="h-8 w-8 text-[#724bf0]" />,
+      // icon: <RocketLaunchIcon className="h-8 w-8 text-[#724bf0]" />,
       title: "Launch & Scale with Ongoing Support",
       description: "We deploy your solution and provide continuous optimization as your business grows"
     }
@@ -292,9 +292,9 @@ export default function Home() {
               >
                 <div className="flex flex-col items-center text-center">
                   <div className="flex items-center justify-center mb-6">
-                    <div className="p-4 rounded-full bg-[#724bf0]/10 mr-4 md:mr-0">
+                    {/* <div className="p-4 rounded-full bg-[#724bf0]/10 mr-4 md:mr-0">
                       {step.icon}
-                    </div>
+                    </div> */}
                     <span className="md:hidden ml-2 text-2xl font-bold text-[#724bf0]">0{index + 1}</span>
                   </div>
                   <div className="md:flex md:items-center md:justify-center md:mb-4 hidden">

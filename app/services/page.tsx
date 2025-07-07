@@ -5,7 +5,7 @@ import {
   RocketLaunchIcon,
   ArrowsRightLeftIcon,
 } from "@heroicons/react/24/outline";
-
+import Link from "next/link";
 import Image from "next/image";
 
 const ServicesPage = () => {
@@ -136,7 +136,9 @@ const ServicesPage = () => {
               automation opportunities.
             </p>
             <button className="bg-[#1c1c1e] hover:bg-gray-800 text-white px-8 py-4 rounded-lg font-medium transition-colors duration-300">
+              <Link href="/contact">
               Book a Strategy Call
+             </Link>
             </button>
           </div>
         </div>

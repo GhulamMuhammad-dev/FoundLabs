@@ -44,22 +44,22 @@ const Navbar = () => {
                     Work
                   </span>
                 </Link>
-                <Link href="/about">
+                {/* <Link href="/about">
                   <span className="text-gray-700 hover:text-[#724bf0] px-3 py-2 text-sm font-medium cursor-pointer">
                     About
                   </span>
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
 
           {/* Right side - CTA buttons */}
           <div className="hidden md:flex md:items-center md:space-x-4">
-            <Link href="/applications">
+            {/* <Link href="/applications">
               <span className="text-gray-700 hover:text-[#724bf0] px-3 py-2 text-sm font-medium cursor-pointer">
                 Applications
               </span>
-            </Link>
+            </Link> */}
             <Link href="/contact">
               <span className="bg-[#724bf0] hover:bg-[#5e3ac7] text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 cursor-pointer">
                 Contact
@@ -130,18 +130,18 @@ const Navbar = () => {
               Work
             </span>
           </Link>
-          <Link href="/about">
+          {/* <Link href="/about">
             <span className="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-700 hover:text-[#724bf0] hover:border-[#724bf0] cursor-pointer">
               About
             </span>
-          </Link>
+          </Link> */}
           <div className="pt-4 border-t border-gray-200">
             <div className="flex space-x-4 px-4">
-              <Link href="/applications">
+              {/* <Link href="/applications">
                 <span className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-gray-700 bg-gray-100 hover:bg-gray-200 cursor-pointer">
                   Applications
                 </span>
-              </Link>
+              </Link> */}
               <Link href="/contact">
                 <span className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-[#724bf0] hover:bg-[#5e3ac7] cursor-pointer">
                  Contact

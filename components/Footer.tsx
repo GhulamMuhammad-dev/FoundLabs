@@ -61,31 +61,31 @@ const Footer = () => {
               <li>
                 <Link href="/work">
                   <span className="text-gray-400 hover:text-[#724bf0] transition-colors cursor-pointer">
-                    Case Studies
+                    Our Work
                   </span>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/about">
                   <span className="text-gray-400 hover:text-[#724bf0] transition-colors cursor-pointer">
                     About Us
                   </span>
                 </Link>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <Link href="/blog">
                   <span className="text-gray-400 hover:text-[#724bf0] transition-colors cursor-pointer">
                     Blog
                   </span>
                 </Link>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <Link href="/careers">
                   <span className="text-gray-400 hover:text-[#724bf0] transition-colors cursor-pointer">
                     Careers
                   </span>
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -94,35 +94,35 @@ const Footer = () => {
             <h3 className="text-lg font-semibold">Services</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/services/ai-agents">
+                <Link href="#">
                   <span className="text-gray-400 hover:text-[#724bf0] transition-colors cursor-pointer">
                     AI Agents
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="/services/chatbots">
+                <Link href="#">
                   <span className="text-gray-400 hover:text-[#724bf0] transition-colors cursor-pointer">
                     Custom Chatbots
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="/services/web-apps">
+                <Link href="#">
                   <span className="text-gray-400 hover:text-[#724bf0] transition-colors cursor-pointer">
                     AI Web Apps
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="/services/saas">
+                <Link href="#">
                   <span className="text-gray-400 hover:text-[#724bf0] transition-colors cursor-pointer">
                     Micro SaaS
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="/services/automation">
+                <Link href="#">
                   <span className="text-gray-400 hover:text-[#724bf0] transition-colors cursor-pointer">
                     Workflow Automation
                   </span>
@@ -137,15 +137,15 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <EnvelopeIcon className="h-5 w-5 text-[#724bf0] mr-3 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-400">hello@foundlabs.ai</span>
+                <span className="text-gray-400">foundlabs.online@gmail.com</span>
               </li>
               <li className="flex items-start">
                 <PhoneIcon className="h-5 w-5 text-[#724bf0] mr-3 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-400">+1 (555) 123-4567</span>
+                <span className="text-gray-400">(+92) 3488269862</span>
               </li>
               <li className="flex items-start">
                 <MapPinIcon className="h-5 w-5 text-[#724bf0] mr-3 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-400">San Francisco, CA</span>
+                <span className="text-gray-400">Islamabad, Pakistan</span>
               </li>
             </ul>
             <div className="pt-4">
@@ -165,17 +165,17 @@ const Footer = () => {
             &copy; {currentYear} FoundLabs. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="/privacy">
+            <Link href="#">
               <span className="text-gray-500 hover:text-gray-300 text-sm cursor-pointer">
                 Privacy Policy
               </span>
             </Link>
-            <Link href="/terms">
+            <Link href="#">
               <span className="text-gray-500 hover:text-gray-300 text-sm cursor-pointer">
                 Terms of Service
               </span>
             </Link>
-            <Link href="/cookies">
+            <Link href="#">
               <span className="text-gray-500 hover:text-gray-300 text-sm cursor-pointer">
                 Cookie Policy
               </span>
