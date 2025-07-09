@@ -19,20 +19,20 @@ const WorkPage = () => {
         { metric: "4.8/5", label: "User satisfaction" },
       ],
     },
-    {
-      id: 2,
-      title: "SaaS Onboarding Automation",
-      description:
-        "Streamlined user onboarding process reducing setup time from 3 days to 2 hours.",
-      tags: ["Workflow Automation", "SaaS", "User Experience"],
-      image: "/projects/saas-onboarding.jpg",
-      link: "#",
-      results: [
-        { metric: "90%", label: "Onboarding completion" },
-        { metric: "2 hours", label: "Average setup time" },
-        { metric: "40%", label: "Churn reduction" },
-      ],
-    },
+  {
+  id: 2,
+  title: "AI-Powered Assistant for Customer Onboarding",
+  description:
+    "Developed an AI assistant chatbot trained on internal company data to automate and personalize the SaaS user onboarding experience, reducing manual support and setup time from 3 days to just 2 hours.",
+  tags: ["AI Chatbot", "SaaS", "Conversational UX", "Automation"],
+  image: "/images/AIassistantThum.webp",
+  link: "https://companyguide.netlify.app",
+  results: [
+    { metric: "90%", label: "Onboarding completion rate" },
+    { metric: "2 hours", label: "Average onboarding time" },
+    { metric: "40%", label: "Reduction in customer churn" },
+  ],
+},
     {
       id: 3,
       title: "Lead Qualification System",
@@ -110,7 +110,7 @@ const WorkPage = () => {
                   href={project.link}
                   className="inline-flex items-center text-[#724bf0] hover:text-[#9c82f9] font-medium"
                 >
-                  View case study
+                  View Project
                   <ArrowTopRightOnSquareIcon className="h-5 w-5 ml-2" />
                 </a>
               </div>

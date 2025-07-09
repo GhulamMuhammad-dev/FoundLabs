@@ -174,7 +174,7 @@ const ContactClient = () => {
           </p>
         </div>
 
-        <div className="bg-gray-800 rounded-2xl shadow-lg overflow-hidden">
+        <div className="bg-gray-900 border-2 border-[#724bf0] rounded-2xl shadow-lg overflow-hidden">
           <div className="p-6 md:p-8">
             {packageDetails()}
 
@@ -275,8 +275,8 @@ const ContactClient = () => {
         <div className="mt-8 text-center text-gray-400 text-sm">
           <p>
             Need immediate assistance? Email us at{' '}
-            <a href="mailto:support@foundlabs.com" className="text-[#724bf0] hover:underline">
-              support@foundlabs.com
+            <a href="mailto:foundlabs.online@gmail.com" className="text-[#724bf0] hover:underline">
+              foundlabs.online@gmail.com
             </a>
           </p>
         </div>

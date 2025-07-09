@@ -4,9 +4,9 @@ import Link from "next/link";
 
 const PackagesPage = () => {
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-100">
+    <div className="min-h-screen bg-black text-gray-100">
       {/* Header */}
-      <header className="bg-gray-800 py-12">
+      <header className="bg-gray-900 py-12">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold text-[#724BF0]">FOUNDLABS</h1>
           <p className="mt-4 text-xl text-gray-300">
@@ -20,7 +20,7 @@ const PackagesPage = () => {
       </header>
 
       {/* Main Content */}
-      <main className="container mx-auto px-4 py-8">
+      <main className="container mx-auto px-4 py-8 mb-12">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#724BF0] mb-2">
@@ -32,7 +32,7 @@ const PackagesPage = () => {
           {/* Packages Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Starter Bot */}
-            <div className="bg-gray-800 rounded-xl border overflow-hidden  transition-all duration-300">
+            <div className="bg-gray-900 rounded-xl border overflow-hidden  transition-all duration-300">
               <div className="p-6 h-full flex flex-col">
                 <div className="mb-6">
                   <div className="flex items-center justify-between mb-2">
@@ -111,7 +111,7 @@ const PackagesPage = () => {
             </div>
 
             {/* Smart RAG Chatbot */}
-            <div className="bg-gray-800 rounded-xl border-2 border-[#724BF0] overflow-hidden transform scale-105 z-10 shadow-lg shadow-[#724BF0]/30 hover:shadow-[#724BF0]/50 transition-all">
+            <div className="bg-gray-900 rounded-xl border-2 border-[#724BF0] overflow-hidden transform scale-105 z-10 ">
               <div className="p-6 h-full flex flex-col">
                 <div className="absolute top-0 right-0 bg-[#724BF0] text-white px-4 py-1 text-sm font-medium rounded-bl-lg">
                   Most Popular
@@ -197,7 +197,7 @@ const PackagesPage = () => {
             </div>
 
             {/* AI Support Assistant */}
-            <div className="bg-gray-800 rounded-xl border overflow-hidden  transition-all duration-300">
+            <div className="bg-gray-900 rounded-xl border overflow-hidden  transition-all duration-300">
               <div className="p-6 h-full flex flex-col">
                 <div className="mb-6">
                   <div className="flex items-center justify-between mb-2">
@@ -288,13 +288,6 @@ const PackagesPage = () => {
           </div>
         </div>
       </main>
-
-      {/* Footer */}
-      <footer className="bg-gray-800 py-8 mt-12">
-        <div className="container mx-auto px-4 text-center text-gray-400">
-          <p>© {new Date().getFullYear()} FOUNDLABS. All rights reserved.</p>
-        </div>
-      </footer>
     </div>
   );
 };

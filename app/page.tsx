@@ -106,15 +106,15 @@ export default function Home() {
     {/* hero section */}
      <section
       className="relative flex items-center justify-center text-center bg-[#1c1c1e] h-screen lg:h-[600px] w-full "
-      style={{
-        backgroundImage: "url('/images/herobg3.webp')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
+      // style={{
+      //   backgroundImage: "url('/images/herobg3.webp')",
+      //   backgroundSize: "cover",
+      //   backgroundPosition: "center",
+      //   backgroundRepeat: "no-repeat",
+      // }}
     >
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/80 hover:bg-[#724bf0]/30 transition duration-300"></div>
+      <div className="absolute inset-0 bg-black/80  transition duration-300"></div>
       
       {/* Content container */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -132,7 +132,7 @@ export default function Home() {
           </p>
           
           {/* Button group */}
-          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center backdrop-blur-md bg-white/10  border-[#5e3ac7] border-2 rounded-2xl p-8 shadow-xl">
+          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center ">
       
             <Link
               href="/contact"
