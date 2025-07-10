@@ -26,7 +26,7 @@ const WorkPage = () => {
     "Developed an AI assistant chatbot trained on internal company data to automate and personalize the SaaS user onboarding experience, reducing manual support and setup time from 3 days to just 2 hours.",
   tags: ["AI Chatbot", "SaaS", "Conversational UX", "Automation"],
   image: "/images/AIassistantThum.webp",
-  link: "https://companyguide.netlify.app",
+  link: "company-ai-assistant.vercel.app",
   results: [
     { metric: "90%", label: "Onboarding completion rate" },
     { metric: "2 hours", label: "Average onboarding time" },
