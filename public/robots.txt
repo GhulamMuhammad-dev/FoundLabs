@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://foundlabs.online
+
+# Sitemaps
+Sitemap: https://foundlabs.online/sitemap.xml

@@ -1,79 +1,87 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import { useSearchParams } from 'next/navigation';
-import Link from 'next/link';
+import React, { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
+import Link from "next/link";
 import {
   EnvelopeIcon,
   UserIcon,
   ChatBubbleLeftRightIcon,
-  ArrowLeftIcon
-} from '@heroicons/react/24/outline';
+  ArrowLeftIcon,
+} from "@heroicons/react/24/outline";
 
 const ContactClient = () => {
   const searchParams = useSearchParams();
   const [selectedPackage, setSelectedPackage] = useState<string | null>(null);
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-    package: ''
+    name: "",
+    email: "",
+    message: "",
+    package: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<null | 'success' | 'error'>(null);
+  const [submitStatus, setSubmitStatus] = useState<null | "success" | "error">(
+    null
+  );
 
   useEffect(() => {
-    const packageParam = searchParams.get('package');
+    const packageParam = searchParams.get("package");
     if (packageParam) {
       setSelectedPackage(packageParam);
 
       let packageInfo = {
-        name: '',
-        price: '',
-        message: ''
+        name: "",
+        price: "",
+        message: "",
       };
 
       switch (packageParam) {
-        case 'starter':
+        case "starter":
           packageInfo = {
-            name: 'Starter Bot',
-            price: '$299-$399',
-            message: "I'm interested in the Starter Bot package and would like to learn more about implementation."
+            name: "Starter Bot",
+            price: "$299-$399",
+            message:
+              "I'm interested in the Starter Bot package and would like to learn more about implementation.",
           };
           break;
-        case 'smart-rag':
+        case "smart-rag":
           packageInfo = {
-            name: 'Smart RAG Chatbot',
-            price: '$499-$799',
-            message: "I'm interested in the Smart RAG Chatbot package and would like to discuss my specific needs."
+            name: "Smart RAG Chatbot",
+            price: "$499-$799",
+            message:
+              "I'm interested in the Smart RAG Chatbot package and would like to discuss my specific needs.",
           };
           break;
-        case 'support-assistant':
+        case "support-assistant":
           packageInfo = {
-            name: 'AI Support Assistant',
-            price: '$999-$1499',
-            message: "I'm interested in the AI Support Assistant package for my business."
+            name: "AI Support Assistant",
+            price: "$999-$1499",
+            message:
+              "I'm interested in the AI Support Assistant package for my business.",
           };
           break;
         default:
           packageInfo = {
-            name: 'AI Chatbot Services',
-            price: '',
-            message: "I'm interested in your AI chatbot services and would like more information."
+            name: "AI Chatbot Services",
+            price: "",
+            message:
+              "I'm interested in your AI chatbot services and would like more information.",
           };
       }
 
-      setFormData(prev => ({
+      setFormData((prev) => ({
         ...prev,
         message: packageInfo.message,
-        package: `${packageInfo.name} ${packageInfo.price}`
+        package: `${packageInfo.name} ${packageInfo.price}`,
       }));
     }
   }, [searchParams]);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -82,25 +90,25 @@ const ContactClient = () => {
     setSubmitStatus(null);
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
 
       if (response.ok) {
-        setSubmitStatus('success');
+        setSubmitStatus("success");
         setFormData({
-          name: '',
-          email: '',
-          message: '',
-          package: formData.package
+          name: "",
+          email: "",
+          message: "",
+          package: formData.package,
         });
       } else {
-        setSubmitStatus('error');
+        setSubmitStatus("error");
       }
     } catch {
-      setSubmitStatus('error');
+      setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
     }
@@ -111,28 +119,28 @@ const ContactClient = () => {
 
     let features: string[] = [];
     switch (selectedPackage) {
-      case 'starter':
+      case "starter":
         features = [
-          '1-page website chatbot',
-          'Pre-trained on your FAQs',
-          'GPT-4o powered',
-          '100 monthly interactions'
+          "1-page website chatbot",
+          "Pre-trained on your FAQs",
+          "GPT-4o powered",
+          "100 monthly interactions",
         ];
         break;
-      case 'smart-rag':
+      case "smart-rag":
         features = [
-          'Trained on your documents',
-          'GPT-4o + vector search',
-          'Branded UI',
-          'Up to 3 pages'
+          "Trained on your documents",
+          "GPT-4o + vector search",
+          "Branded UI",
+          "Up to 3 pages",
         ];
         break;
-      case 'support-assistant':
+      case "support-assistant":
         features = [
-          'Analytics dashboard',
-          'CRM integration',
-          'Slack/email alerts',
-          '10K+ queries/month'
+          "Analytics dashboard",
+          "CRM integration",
+          "Slack/email alerts",
+          "10K+ queries/month",
         ];
         break;
     }
@@ -140,7 +148,7 @@ const ContactClient = () => {
     return (
       <div className="bg-[#724bf0]/10 p-4 rounded-lg mb-6 border border-[#724bf0]/30">
         <h3 className="font-bold text-lg text-[#724bf0] mb-2">
-          {formData.package || 'AI Chatbot Services'}
+          {formData.package || "AI Chatbot Services"}
         </h3>
         <ul className="space-y-1 text-sm text-gray-300">
           {features.map((feature, index) => (
@@ -182,7 +190,10 @@ const ContactClient = () => {
               <input type="hidden" name="package" value={formData.package} />
 
               <div>
-                <label htmlFor="name" className="text-sm font-medium text-gray-300 mb-1 block">
+                <label
+                  htmlFor="name"
+                  className="text-sm font-medium text-gray-300 mb-1 block"
+                >
                   Your Name
                 </label>
                 <div className="relative">
@@ -201,7 +212,10 @@ const ContactClient = () => {
               </div>
 
               <div>
-                <label htmlFor="email" className="text-sm font-medium text-gray-300 mb-1 block">
+                <label
+                  htmlFor="email"
+                  className="text-sm font-medium text-gray-300 mb-1 block"
+                >
                   Email Address
                 </label>
                 <div className="relative">
@@ -220,7 +234,10 @@ const ContactClient = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="text-sm font-medium text-gray-300 mb-1 block">
+                <label
+                  htmlFor="message"
+                  className="text-sm font-medium text-gray-300 mb-1 block"
+                >
                   Your Message
                 </label>
                 <div className="relative">
@@ -242,28 +259,44 @@ const ContactClient = () => {
                 type="submit"
                 disabled={isSubmitting}
                 className={`w-full text-white bg-[#724bf0] hover:bg-[#6338E0] transition-colors font-semibold py-3 rounded-lg shadow-sm ${
-                  isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
+                  isSubmitting ? "opacity-70 cursor-not-allowed" : ""
                 }`}
               >
                 {isSubmitting ? (
                   <span className="flex items-center justify-center">
-                    <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    <svg
+                      className="animate-spin -ml-1 mr-2 h-4 w-4 text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      ></circle>
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                      ></path>
                     </svg>
                     Sending...
                   </span>
                 ) : (
-                  'Send Inquiry'
+                  "Send Inquiry"
                 )}
               </button>
 
-              {submitStatus === 'success' && (
+              {submitStatus === "success" && (
                 <div className="p-3 bg-green-900/30 text-green-400 rounded-lg text-center">
                   Message sent successfully! We&apos;ll contact you shortly.
                 </div>
               )}
-              {submitStatus === 'error' && (
+              {submitStatus === "error" && (
                 <div className="p-3 bg-red-900/30 text-red-400 rounded-lg text-center">
                   Something went wrong. Please try again or email us directly.
                 </div>
@@ -274,8 +307,11 @@ const ContactClient = () => {
 
         <div className="mt-8 text-center text-gray-400 text-sm">
           <p>
-            Need immediate assistance? Email us at{' '}
-            <a href="mailto:foundlabs.online@gmail.com" className="text-[#724bf0] hover:underline">
+            Need immediate assistance? Email us at{" "}
+            <a
+              href="mailto:foundlabs.online@gmail.com"
+              className="text-[#724bf0] hover:underline"
+            >
               foundlabs.online@gmail.com
             </a>
           </p>
