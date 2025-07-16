@@ -223,7 +223,7 @@ export default function Home() {
               <span className="block bg-gradient-to-tl from-gray-400 to-white bg-clip-text text-transparent">
                 GROW FASTER
               </span>
-              <span className="block  bg-gradient-to-tl from-[#5e3ac7]/50 to-[#5e3ac7] bg-clip-text text-transparent">
+              <span className="block  bg-gradient-to-tl from-[#5e3ac7]/60 to-[#5e3ac7] bg-clip-text text-transparent">
                 AND WORK LESS
               </span>
             </h1>
